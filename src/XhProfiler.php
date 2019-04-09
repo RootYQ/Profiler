@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wenqi
- * Date: 2019/4/8
- * Time: 11:16
- */
-
 namespace RootYQ\Profiler;
 
 

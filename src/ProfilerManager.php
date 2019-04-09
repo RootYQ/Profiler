@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wenqi
- * Date: 2019/4/8
- * Time: 11:34
- */
 
 namespace RootYQ\Profiler;
 
@@ -27,4 +21,6 @@ class ProfilerManager
 
         return new $this->profiler[$driver]();
     }
+
+
 }

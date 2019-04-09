@@ -12,7 +12,8 @@
     "minimum-stability": "stable",
     "require": {},
     "require-dev": {
-        "phpunit/phpunit": "4.8.*"
+        "phpunit/phpunit": "4.8.*",
+        "mikey179/vfsStream": "~1"
     },
     "autoload": {
         "psr-4": {"RootYQ\\Profiler\\": "src"}

@@ -4,6 +4,14 @@ namespace RootYQ\Profiler;
 
 interface Profiler
 {
+
+    /**
+     * check the environment
+     *
+     * @return bool
+     */
+    public function checkEnv();
+
     /**
      * @return mixed
      */

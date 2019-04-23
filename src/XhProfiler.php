@@ -1,9 +1,34 @@
 <?php
 namespace RootYQ\Profiler;
 
+use Exception;
 
 class XhProfiler implements Profiler
 {
+
+    /**
+     * XhProfiler constructor.
+     * @throws Exception
+     */
+    public function __construct()
+    {
+        $this->checkEnv();
+    }
+
+    /**
+     * check the environment
+     *
+     * @return bool
+     * @throws Exception
+     */
+    public function checkEnv()
+    {
+        if (!extension_loaded('xhprof')) {
+            throw new Exception('please ensure xhprof extension is installed');
+        }
+
+        return true;
+    }
     /**
      * @return mixed
      */
@@ -19,4 +44,6 @@ class XhProfiler implements Profiler
     {
         return xhprof_disable();
     }
+
+
 }

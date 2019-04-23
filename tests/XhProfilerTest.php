@@ -9,8 +9,12 @@ class XhProfilerTest extends \PHPUnit\Framework\TestCase
 
     public function setUp()
     {
+        if (extension_loaded('xhprof')) {
+            $this->markTestSkipped('xhprof extension is not installed');
+        }
         $this->profiler = new \RootYQ\Profiler\XhProfiler();
     }
+
 
     public function testTurnOn()
     {
